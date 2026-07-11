@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <link rel="stylesheet" href="style.css" />
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
 
@@ -28,7 +30,11 @@
       <div class="vinyl-center" id="vinylCenter"></div>
     </div>
     <div class="vinyl-notes" id="vinylNotes"></div>
-    <audio id="bgMusic" loop></audio>
+    <audio id="bgMusic" loop src="tunetank-asian-chinese-background-music-349936.mp3"></audio>
+    <!-- YouTube Player ẩn cho vibe Song Yaxuan -->
+    <div id="ytPlayerWrap" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none;display:none;">
+      <div id="ytPlayerIframe"></div>
+    </div>
   </div>
 
   <!-- ═══════════════ WELCOME SCREEN ═══════════════ -->

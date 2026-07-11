@@ -226,12 +226,15 @@ const YAXUAN_IMAGES = ['yaxuan.png', 'yaxuan1.png', 'yaxuan2.png', 'yaxuan3.png'
 /* ══════════════════════════════════════════════════
    VIBE-SPECIFIC MUSIC PLAYLIST
 ══════════════════════════════════════════════════ */
+// Local MP3 cho Game / Movie / Sleep
 const VIBE_MUSIC = {
-  game:   "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-  movie:  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
-  sleep:  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
-  yaxuan: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Nhạc nền phong cách lofi/châu Á lãng mạn
+  game:   "tunetank-asian-chinese-background-music-349936.mp3",
+  movie:  "tunetank-asian-chinese-background-music-349936.mp3",
+  sleep:  "tunetank-asian-chinese-background-music-349936.mp3"
 };
+// YouTube video ID riêng cho vibe Yaxuan
+const YAXUAN_YT_ID = "HLUrpPiHm3U"; // "是你" - Song Yaxuan
+const YAXUAN_YT_PLAYLIST = "HLUrpPiHm3U,yU2LpJC8b24"; // playlist: 是你 + chill song
 
 /* ══════════════════════════════════════════════════
    STATE
@@ -249,6 +252,8 @@ let animFrame      = null;
 let trailFrame     = null;
 let pendingGroupClick = null;
 let secretSlideInterval = null;
+let ytPlayer       = null;   // YouTube IFrame Player instance
+let ytReady        = false;  // YouTube API đã sẵn sàng chưa
 
 /* ══════════════════════════════════════════════════
    LOCAL STORAGE
@@ -453,26 +458,47 @@ function setVinylTheme(vibe) {
 }
 
 function toggleMusic() {
-  const audio = document.getElementById('bgMusic');
-  const disc  = document.getElementById('vinylDisc');
+  const disc    = document.getElementById('vinylDisc');
   const tooltip = document.getElementById('vinylTooltip');
-  if (musicPlaying) {
-    audio.pause();
-    disc.classList.remove('spinning');
-    clearInterval(noteInterval);
-    musicPlaying = false;
-  } else {
-    audio.play().then(() => {
+
+  if (currentVibe === 'yaxuan') {
+    // ── Vibe Yaxuan: điều khiển YouTube Player ──
+    if (!ytPlayer || !ytReady) {
+      console.warn('YouTube player chưa sẵn sàng, thử lại sau...');
+      return;
+    }
+    if (musicPlaying) {
+      ytPlayer.pauseVideo();
+      disc.classList.remove('spinning');
+      clearInterval(noteInterval);
+      musicPlaying = false;
+    } else {
+      ytPlayer.playVideo();
       disc.classList.add('spinning');
       noteInterval = setInterval(spawnNote, 900);
       musicPlaying = true;
       if (tooltip) tooltip.classList.add('hidden');
-    }).catch(err => {
-      console.warn("Nhạc bị trình duyệt chặn hoặc lỗi nguồn phát:", err);
-      if (tooltip) tooltip.classList.remove('hidden');
-      
-      alert("Cánh Cụt ơi, chạm trực tiếp vào đĩa nhạc ở góc dưới bên phải để nghe nhạc nhé! 🐧🎵\n\n(Nếu dùng iPhone, hãy nhớ bật nút gạt im lặng bên sườn máy sang chế độ Đổ chuông và tăng âm lượng nha!)");
-    });
+    }
+  } else {
+    // ── Vibe khác: điều khiển <audio> local ──
+    const audio = document.getElementById('bgMusic');
+    if (musicPlaying) {
+      audio.pause();
+      disc.classList.remove('spinning');
+      clearInterval(noteInterval);
+      musicPlaying = false;
+    } else {
+      audio.play().then(() => {
+        disc.classList.add('spinning');
+        noteInterval = setInterval(spawnNote, 900);
+        musicPlaying = true;
+        if (tooltip) tooltip.classList.add('hidden');
+      }).catch(err => {
+        console.warn('Nhạc bị trình duyệt chặn hoặc lỗi nguồn phát:', err);
+        if (tooltip) tooltip.classList.remove('hidden');
+        alert('Cánh Cụt ơi, chạm trực tiếp vào đĩa nhạc ở góc dưới bên phải để nghe nhạc nhé! 🐧🎵\n\n(Nếu dùng iPhone, hãy nhớ bật nút gạt im lặng bên sườn máy sang chế độ Đổ chuông và tăng âm lượng nha!)');
+      });
+    }
   }
 }
 
@@ -512,19 +538,40 @@ function selectVibe(vibe) {
   renderGrid();
   setVinylTheme(vibe);
 
-  // Kích hoạt phát nhạc động
+  // ── Dừng nhạc hiện tại trước khi chuyển vibe ──
   const audio = document.getElementById('bgMusic');
-  if (audio) {
-    audio.src = VIBE_MUSIC[vibe];
-    audio.load();
-    
-    const disc = document.getElementById('vinylDisc');
-    disc.classList.remove('spinning');
-    if (noteInterval) clearInterval(noteInterval);
-    musicPlaying = false;
-    
-    // Tự động kích hoạt phát nhạc dựa trên click gesture
-    toggleMusic();
+  const disc  = document.getElementById('vinylDisc');
+  disc.classList.remove('spinning');
+  if (noteInterval) clearInterval(noteInterval);
+  musicPlaying = false;
+
+  if (vibe === 'yaxuan') {
+    // Dừng audio local, khởi động YouTube
+    if (audio) audio.pause();
+    const ytWrap = document.getElementById('ytPlayerWrap');
+    if (ytWrap) ytWrap.style.display = 'block';
+    if (ytPlayer && ytReady) {
+      ytPlayer.loadVideoById(YAXUAN_YT_ID);
+      // Kích hoạt phát sau khi player đã load
+      setTimeout(() => toggleMusic(), 300);
+    } else {
+      // YouTube API chưa ready – sẽ auto-play khi onYouTubeIframeAPIReady
+      window._pendingYTPlay = true;
+    }
+  } else {
+    // Dừng YouTube nếu đang chạy
+    if (ytPlayer && ytReady) {
+      try { ytPlayer.stopVideo(); } catch(e) {}
+    }
+    const ytWrap = document.getElementById('ytPlayerWrap');
+    if (ytWrap) ytWrap.style.display = 'none';
+    // Phát audio local
+    if (audio) {
+      audio.src = VIBE_MUSIC[vibe];
+      audio.load();
+      // Auto-play khi đã có gesture
+      toggleMusic();
+    }
   }
 
   if (animFrame) cancelAnimationFrame(animFrame);
@@ -548,12 +595,15 @@ function goBack() {
   // Tạm dừng nhạc khi về màn hình chính
   const audio = document.getElementById('bgMusic');
   const disc  = document.getElementById('vinylDisc');
-  if (audio && musicPlaying) {
-    audio.pause();
-    disc.classList.remove('spinning');
-    clearInterval(noteInterval);
-    musicPlaying = false;
+  disc.classList.remove('spinning');
+  if (noteInterval) clearInterval(noteInterval);
+  musicPlaying = false;
+  if (audio) audio.pause();
+  if (ytPlayer && ytReady) {
+    try { ytPlayer.stopVideo(); } catch(e) {}
   }
+  const ytWrap = document.getElementById('ytPlayerWrap');
+  if (ytWrap) ytWrap.style.display = 'none';
 }
 
 /* ══════════════════════════════════════════════════
@@ -922,6 +972,42 @@ function closeSecret(e) {
 }
 
 /* ══════════════════════════════════════════════════
+   YOUTUBE IFRAME API CALLBACK
+══════════════════════════════════════════════════ */
+function onYouTubeIframeAPIReady() {
+  ytPlayer = new YT.Player('ytPlayerIframe', {
+    videoId: YAXUAN_YT_ID,
+    playerVars: {
+      autoplay: 0,
+      controls: 0,
+      loop: 1,
+      playlist: YAXUAN_YT_PLAYLIST, // 是你 + chill song lặp lại
+      modestbranding: 1,
+      rel: 0
+    },
+    events: {
+      onReady: (event) => {
+        ytReady = true;
+        console.log('YouTube player ready ✅');
+        if (window._pendingYTPlay) {
+          window._pendingYTPlay = false;
+          event.target.playVideo();
+          const disc = document.getElementById('vinylDisc');
+          disc.classList.add('spinning');
+          noteInterval = setInterval(spawnNote, 900);
+          musicPlaying = true;
+          const tooltip = document.getElementById('vinylTooltip');
+          if (tooltip) tooltip.classList.add('hidden');
+        }
+      },
+      onError: (e) => {
+        console.warn('YouTube player error:', e.data);
+      }
+    }
+  });
+}
+
+/* ══════════════════════════════════════════════════
    AUDIO AUTO-UNLOCK FOR MOBILE / SAFARI
 ══════════════════════════════════════════════════ */
 function unlockAudioOnGesture() {
@@ -929,13 +1015,11 @@ function unlockAudioOnGesture() {
   if (audio) {
     audio.play().then(() => {
       audio.pause();
-      console.log("AudioContext unlocked successfully!");
+      console.log('AudioContext unlocked successfully!');
     }).catch(err => {
-      console.log("Audio unlock failed/blocked:", err);
+      console.log('Audio unlock failed/blocked:', err);
     });
   }
-  window.removeEventListener('click', unlockAudioOnGesture);
-  window.removeEventListener('touchstart', unlockAudioOnGesture);
 }
 
 window.addEventListener('click', unlockAudioOnGesture, { once: true });
