@@ -57,12 +57,12 @@ const WISHES = {
       vi: "Chúc Cánh Cụt Trân Trân xem phim cực vui, đồ ăn vặt ngập tràn, cốt truyện siêu cuốn, xem cực đã cực thỏa!"
     },
     {
-      zh: "愿珍珍沉浸在精彩的故事里，享受今夜专属的影院时光！",
+      zh: "愿珍珍沉浸在精彩的故事里，享受今夜专属 của rạp phim!",
       pinyin: "Yuàn Zhēnzhēn chénjìn zài jīngcǎi de gùshi lǐ, xiǎngshòu jīn yè zhuānshǔ de yǐngyuàn shíguāng!",
       vi: "Chúc Trân Trân đắm chìm trong những câu chuyện đặc sắc, tận hưởng khoảng thời gian rạp phim độc quyền tối nay!"
     },
     {
-      zh: "虽然电影很精彩，但小企鹅也要注意休息，别熬到太晚哦！",
+      zh: "虽然电影很精彩，但小企鹅也要注意休息，别熬 toan too muộn!",
       pinyin: "Suīrán diànyǐng hěn jīngcǎi, dàn Xiǎo Qǐ'é yě yào zhùyì xiūxi, bié áo dào tài wǎn o!",
       vi: "Dù phim hay đến mấy nhưng Cánh Cụt cũng phải chú ý nghỉ ngơi nhé, đừng thức khuya đến 5h sáng đấy!"
     },
@@ -101,7 +101,7 @@ const WISHES = {
   sleep: [
     {
       zh: "月亮眨眨眼，星光暖心田，愿小企鹅珍珍卸下一身疲惫，晚安，做个甜甜的美梦。",
-      pinyin: "Yuèliang zhǎ zhǎ yǎn, xīngguāng nuǎn xīn tián, yuàn Xiǎo Qǐ'é Zhēnzhēn xiè xià yīshēn píbèi, wǎn'ān, zuò gè tiántián de měimèng.",
+      pinyin: "Yuèliang zhǎ zhǎ yǎn, xīngguāng nuǎn xīn tián, yuàn Xiǎo Qǐ'é Zhēnzhēn xiè xià yīshēn píbèi, wǎn'ān, zuò gè tiántián de mèimèng.",
       vi: "Trăng khẽ chớp mắt, ánh sao sưởi ấm tim, nguyện Cánh Cụt Trân Trân trút bỏ mọi mệt mỏi, ngủ ngon và mơ giấc mộng ngọt ngào nhất."
     },
     {
@@ -115,22 +115,22 @@ const WISHES = {
       vi: "Hãy buông bỏ bận rộn ngày dài, để màn đêm dịu dàng ôm lấy em, chúc Trân Trân ngủ thật ngon, ngủ ngon nhé."
     },
     {
-      zh: "愿小企鹅今夜枕着星光入眠，梦里有温暖的阳光和盛开的花朵，晚安。",
+      zh: "愿小企鹅今夜枕着星光入眠，梦里有温暖的阳光 và hoa nở rực rỡ, ngủ ngon.",
       pinyin: "Yuàn Xiǎo Qǐ'é jīn yè zhěn zhe xīngguāng rù mián, mèng lǐ yǒu wēnnuǎn de yángguāng hé shèngkāi de huāduǒ, wǎn'ān.",
       vi: "Nguyện Cánh Cụt đêm nay gối đầu lên ánh sao mà ngủ, trong mơ có nắng ấm và những đóa hoa nở rực rỡ, ngủ ngon."
     },
     {
-      zh: "把今天的烦恼都交给夜空，明天又是元气满满的珍珍，晚安，好梦。",
-      pinyin: "Bǎ jīntiān de fánnǎo dōu jiāo gěi yèkōng, míngtiān yòu ...",
+      zh: "把今天的烦恼都交给夜空，明天又是元气满满 của Bảo Trân, ngủ ngon và mơ đẹp.",
+      pinyin: "Bǎ jīntiān de fánnǎo dōu jiāo gěi yèkōng, míngtiān yòu shì yuánqì mǎnmǎn de Zhēnzhēn, wǎn'ān, hǎo mèng.",
       vi: "Hãy gửi hết muộn phiền hôm nay cho bầu trời đêm, ngày mai lại là một Trân Trân tràn đầy năng lượng, ngủ ngon và mơ đẹp."
     },
     {
-      zh: "愿晚风带走小企鹅的疲惫，月光洒满你的床头，送你一个最温柔的梦境，晚安。",
+      zh: "愿晚风带走小企鹅 của sự mệt mỏi,月光洒满你的床头，送你 một giấc mộng dịu dàng, ngủ ngon.",
       pinyin: "Yuàn wǎnfēng dài zǒu Xiǎo Qǐ'é de píbèi, yuèguāng sǎ mǎn nǐ de chuángtóu, sòng nǐ yī gè zuì wēnróu de mèngjìng, wǎn'ān.",
       vi: "Nguyện gió đêm mang đi sự mệt mỏi của Cánh Cụt, ánh trăng rọi sáng đầu giường, gửi em giấc mộng dịu dàng nhất đêm nay."
     },
     {
-      zh: "星光闪烁，夜幕降临，愿最宁静的夜色带给珍珍最深沉的睡眠，晚安。",
+      zh: "星光闪烁，夜幕降临，愿最宁静的夜色带给珍珍最深沉 de giấc ngủ, ngủ ngon.",
       pinyin: "Xīngguāng shǎnshuò, yèmù jiànglín, yuàn zuì níngjìng de yèsè dài gěi Zhēnzhēn zuì shēnchén de shuìmián, wǎn'ān.",
       vi: "Sao sáng lấp lánh, màn đêm buông xuống, nguyện đêm tối tĩnh lặng nhất mang đến cho Trân Trân giấc ngủ sâu và ngon nhất."
     },
@@ -140,7 +140,7 @@ const WISHES = {
       vi: "Nguyện trong giấc mơ của bzhenn có biển cả bầu trời sao, có tất cả sự dịu dàng và những giai điệu tuyệt vời nhất."
     },
     {
-      zh: "闭上眼睛，静静听风的声音，那是世界在对小企鹅说：晚安，明天见。",
+      zh: "Nhắm mắt lại, lặng nghe tiếng gió rì rào, đó là thế giới đang thầm thì với Cánh Cụt: Ngủ ngon, ngày mai gặp lại.",
       pinyin: "Bì shàng yǎnjīng, jìngjìng tīng fēng de shēngyīn, nà shì shìjiè zài duì Xiǎo Qǐ'é shuō: wǎn'ān, míngtiān jiàn.",
       vi: "Nhắm mắt lại, lặng nghe tiếng gió rì rào, đó là thế giới đang thầm thì với Cánh Cụt: Ngủ ngon, ngày mai gặp lại."
     }
@@ -154,22 +154,22 @@ const WISHES = {
     },
     {
       zh: "祝珍珍永远是宋亚轩最可爱的小粉丝，追星路上快乐无边！",
-      pinyin: "Zhù Zhēnzhēn yǒngyuǎn... Sòng Yàxuān zuì kě'ài de xiǎo fěnsī...",
+      pinyin: "Zhù Zhēnzhēn yǒngyuǎn shì Sòng Yàxuān zuì kě'ài de xiǎo fěnsī, zhuī xīng lù shang kuàilè wúbiān!",
       vi: "Chúc Trân Trân mãi mãi là fan dễ thương nhất của Tống Á Hiên, con đường theo đuổi idol tràn đầy hạnh phúc!"
     },
     {
       zh: "愿小企鹅每次看到亚轩的视频都元气满满，笑容灿烂如春光！",
-      pinyin: "Yuàn Xiǎo Qǐ'é měi cì kàn dào Yàxuān de... dōu yuánqì mǎnmǎn...",
+      pinyin: "Yuàn Xiǎo Qǐ'é měi cì kàn dào Yàxuān de shìpín dōu yuánqì mǎnmǎn, xiàoróng cànlàn rú chūnguāng!",
       vi: "Nguyện Cánh Cụt mỗi lần xem clip của Á Hiên đều tràn đầy năng lượng, nụ cười rạng rỡ như ánh xuân!"
     },
     {
       zh: "祝bzhenn与亚轩的每一次相遇都成为珍贵的记忆，快乐永远！",
-      pinyin: "Zhù bzhenn... Yàxuān de měi yī cì xiāngyù dōu...",
+      pinyin: "Zhù bzhenn yǔ Yàxuān de měi yī cì xiāngyù dōu chéngwéi zhēnguì de jìyì, kuàilè yǒngyuǎn!",
       vi: "Chúc bzhenn mỗi lần gặp gỡ Á Hiên đều trở thành ký ức quý giá, niềm vui mãi mãi!"
     },
     {
       zh: "愿追星的珍珍永远保持初心，宋亚轩的阳光永远照亮你的世界！",
-      pinyin: "Yuàn zhuī xīng de Zhēnzhēn yǒngyuǎn bǎochí chūxīn, Sòng Yàxuān de yángguāng yǒngyuǎn zhàoliàng nǐ de shìjiè!",
+      pinyin: "Yuàn zhuī xīng de Zhēnzhēn yǒngyuǎn bǎochí chūxīn, Sòng Yàxuān de yángguāng yֹngyuǎn zhàoliàng nǐ de shìjiè!",
       vi: "Nguyện Trân Trân theo đuổi idol luôn giữ vững sơ tâm, ánh nắng của Tống Á Hiên mãi soi sáng thế giới của em!"
     },
     {
@@ -179,7 +179,7 @@ const WISHES = {
     },
     {
       zh: "愿小企鹅的追星之路越走越宽，收获满满，快乐比星星还 do!",
-      pinyin: "Yuàn Xiǎo Qǐ'é de zhuī xīng zhī lù yuè zǒu yuè kuān, shōuhuò mǎnmǎn, kuàilè bǐ xīngxīng hái duō!",
+      pinyin: "Yuàn Xiǎo Qǐ'é de zhuī xīng zhī lù yuè zǒu yuè kuān, shōuhuò mǎnmǎn, kuàilè bǐ xīngxīng hái duão!",
       vi: "Nguyện con đường theo đuổi idol của Cánh Cụt ngày càng rộng mở, gặt hái đầy thành quả, niềm vui nhiều hơn cả những vì sao!"
     },
     {
@@ -188,7 +188,7 @@ const WISHES = {
       vi: "Chúc duyên phận giữa Trân Trân và Á Hiên ngày càng sâu đậm, làm fan Cánh Cụt hạnh phúc nhất đời!"
     },
     {
-      zh: "愿追星的每一天都充满惊喜，珍珍，你是亚轩最可爱的应援！",
+      zh: "愿追星的每一天都充满惊喜，珍珍，你是亚轩最 can't kě'ài de应援！",
       pinyin: "Yuàn zhuī xīng de měi yī tiān dōu chōngmǎn jīngxǐ, Zhēnzhēn, nǐ shì Yàxuān zuì kě'ài de yīngyuán!",
       vi: "Nguyện mỗi ngày theo đuổi idol đều tràn đầy bất ngờ thú vị, Trân Trân, em là người cổ vũ dễ thương nhất của Á Hiên!"
     }
@@ -196,7 +196,7 @@ const WISHES = {
 };
 
 /* ══════════════════════════════════════════════════
-   VIBE META – particle type, greeting, etc.
+   VIBE META
 ══════════════════════════════════════════════════ */
 const VIBE_META = {
   game:   { greeting: "🎮  Cánh Cụt · Game Mode",     emoji: "🎮", particle: "pixel" },
@@ -206,18 +206,16 @@ const VIBE_META = {
 };
 
 /* ══════════════════════════════════════════════════
-   GROUP PASSWORDS – mỗi nhóm 3 hộp
-   Nhóm A = hộp 0,1,2 · B = hộp 3,4,5 · C = hộp 6,7,8
+   GROUP PASSWORDS
 ══════════════════════════════════════════════════ */
 const GROUP_PASSWORDS = {
-  A: "chutoi",      // Nhóm A – Hộp 1, 2, 3
-  B: "baotran",     // Nhóm B – Hộp 4, 5, 6
-  C: "yaxuan2025"   // Nhóm C – Hộp 7, 8, 9
+  A: "chutoi",
+  B: "baotran",
+  C: "yaxuan2025"
 };
 
-// Mapping group → box indices
 const GROUP_BOXES = { A: [0,1,2], B: [3,4,5], C: [6,7,8] };
-const BOX_GROUP   = [0,0,0, 1,1,1, 2,2,2]; // boxIndex → groupIndex (A=0,B=1,C=2)
+const BOX_GROUP   = [0,0,0, 1,1,1, 2,2,2];
 const GROUP_NAMES = ['A','B','C'];
 
 /* ══════════════════════════════════════════════════
@@ -226,11 +224,21 @@ const GROUP_NAMES = ['A','B','C'];
 const YAXUAN_IMAGES = ['yaxuan.png', 'yaxuan1.png', 'yaxuan2.png', 'yaxuan3.png'];
 
 /* ══════════════════════════════════════════════════
+   VIBE-SPECIFIC MUSIC PLAYLIST
+══════════════════════════════════════════════════ */
+const VIBE_MUSIC = {
+  game:   "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+  movie:  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
+  sleep:  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
+  yaxuan: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" // Nhạc nền phong cách lofi/châu Á lãng mạn
+};
+
+/* ══════════════════════════════════════════════════
    STATE
 ══════════════════════════════════════════════════ */
 let currentVibe    = null;
-let openedBoxes    = new Set();   // chỉ số hộp đã mở
-let unlockedGroups = new Set();   // nhóm đã nhập mật mã đúng
+let openedBoxes    = new Set();
+let unlockedGroups = new Set();
 let musicPlaying   = false;
 let noteInterval   = null;
 let particleCtx    = null;
@@ -239,11 +247,11 @@ let particles      = [];
 let trailDots      = [];
 let animFrame      = null;
 let trailFrame     = null;
-let pendingGroupClick = null;     // nhóm đang chờ xác thực password
-let secretSlideInterval = null;   // slide show của card hologram
+let pendingGroupClick = null;
+let secretSlideInterval = null;
 
 /* ══════════════════════════════════════════════════
-   LOCAL STORAGE – lưu trạng thái đã mở theo vibe
+   LOCAL STORAGE
 ══════════════════════════════════════════════════ */
 function lsKey(vibe)    { return `chut_opened_${vibe}`; }
 function lsGroupKey(vibe) { return `chut_unlocked_${vibe}`; }
@@ -290,7 +298,7 @@ function spawnParticles(type) {
   const count = type === 'pixel'  ? 80
               : type === 'dust'   ? 55
               : type === 'petal'  ? 60
-              :                     110; // star
+              :                     110;
   const W = window.innerWidth, H = window.innerHeight;
   for (let i = 0; i < count; i++) {
     const p = {
@@ -364,7 +372,7 @@ function drawParticles() {
 }
 
 /* ══════════════════════════════════════════════════
-   MAGIC TRAIL – sparkles theo chuột / chạm tay
+   MAGIC TRAIL
 ══════════════════════════════════════════════════ */
 function initTrail() {
   const handler = (x, y) => {
@@ -454,11 +462,17 @@ function toggleMusic() {
     clearInterval(noteInterval);
     musicPlaying = false;
   } else {
-    audio.play().catch(() => {});
-    disc.classList.add('spinning');
-    noteInterval = setInterval(spawnNote, 900);
-    musicPlaying = true;
-    if (tooltip) tooltip.classList.add('hidden');
+    audio.play().then(() => {
+      disc.classList.add('spinning');
+      noteInterval = setInterval(spawnNote, 900);
+      musicPlaying = true;
+      if (tooltip) tooltip.classList.add('hidden');
+    }).catch(err => {
+      console.warn("Nhạc bị trình duyệt chặn hoặc lỗi nguồn phát:", err);
+      if (tooltip) tooltip.classList.remove('hidden');
+      
+      alert("Cánh Cụt ơi, chạm trực tiếp vào đĩa nhạc ở góc dưới bên phải để nghe nhạc nhé! 🐧🎵\n\n(Nếu dùng iPhone, hãy nhớ bật nút gạt im lặng bên sườn máy sang chế độ Đổ chuông và tăng âm lượng nha!)");
+    });
   }
 }
 
@@ -498,8 +512,18 @@ function selectVibe(vibe) {
   renderGrid();
   setVinylTheme(vibe);
 
-  // Tự động bật nhạc khi vừa chọn vibe
-  if (!musicPlaying) {
+  // Kích hoạt phát nhạc động
+  const audio = document.getElementById('bgMusic');
+  if (audio) {
+    audio.src = VIBE_MUSIC[vibe];
+    audio.load();
+    
+    const disc = document.getElementById('vinylDisc');
+    disc.classList.remove('spinning');
+    if (noteInterval) clearInterval(noteInterval);
+    musicPlaying = false;
+    
+    // Tự động kích hoạt phát nhạc dựa trên click gesture
     toggleMusic();
   }
 
@@ -520,6 +544,16 @@ function goBack() {
   if (particleCtx) particleCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
   currentVibe = null;
   document.body.removeAttribute('data-theme');
+  
+  // Tạm dừng nhạc khi về màn hình chính
+  const audio = document.getElementById('bgMusic');
+  const disc  = document.getElementById('vinylDisc');
+  if (audio && musicPlaying) {
+    audio.pause();
+    disc.classList.remove('spinning');
+    clearInterval(noteInterval);
+    musicPlaying = false;
+  }
 }
 
 /* ══════════════════════════════════════════════════
@@ -690,7 +724,7 @@ function closePasswordModal(e) {
 }
 
 /* ══════════════════════════════════════════════════
-   OPEN BOX (Unboxing animation)
+   OPEN BOX
 ══════════════════════════════════════════════════ */
 function openBox(idx) {
   if (openedBoxes.has(idx)) return;
@@ -708,14 +742,12 @@ function openBox(idx) {
 
   burstParticles(boxEl);
 
-  // Set modal content
   const wish = WISHES[currentVibe][idx];
   document.getElementById('unboxZh').textContent     = wish.zh;
   document.getElementById('unboxPinyin').textContent = wish.pinyin;
   document.getElementById('unboxVi').textContent     = wish.vi;
   document.getElementById('unboxContent').style.opacity = '0';
 
-  // Hiển thị avatar nhỏ của Song Yaxuan (tuần tự theo 4 hình ảnh)
   const avatar = document.getElementById('unboxYaxuanImg');
   if (currentVibe === 'yaxuan') {
     avatar.style.display = 'block';
@@ -753,7 +785,7 @@ function openBox(idx) {
 }
 
 /* ══════════════════════════════════════════════════
-   BURST PARTICLES (box click)
+   BURST PARTICLES
 ══════════════════════════════════════════════════ */
 function burstParticles(boxEl) {
   const rect = boxEl.getBoundingClientRect();
@@ -783,7 +815,7 @@ function burstParticles(boxEl) {
 }
 
 /* ══════════════════════════════════════════════════
-   CONFETTI (canvas overlay)
+   CONFETTI
 ══════════════════════════════════════════════════ */
 function spawnConfetti(cx, cy, count) {
   const colors = ['#f472b6','#a855f7','#22d3ee','#fbbf24','#34d399','#f87171','#818cf8'];
@@ -830,23 +862,19 @@ function showSecretLetter() {
   mediaWrap.innerHTML = '';
   
   if (currentVibe === 'yaxuan') {
-    // Holographic card của Song Yaxuan
     const card = document.createElement('div');
     card.className = 'yaxuan-holo-card';
     card.id = 'yaxuanHoloCard';
     card.title = 'Card bo góc Hologram lấp lánh của Á Hiên 🌸';
     
-    // Đặt ảnh đầu tiên
     let imgIdx = 0;
     card.style.backgroundImage = `url('${YAXUAN_IMAGES[imgIdx]}')`;
     mediaWrap.appendChild(card);
 
-    // Bắt đầu slideshow tự chuyển ảnh mỗi 3.5 giây
     if (secretSlideInterval) clearInterval(secretSlideInterval);
     secretSlideInterval = setInterval(() => {
       imgIdx = (imgIdx + 1) % YAXUAN_IMAGES.length;
       
-      // Hiệu ứng fade chuyển đổi ảnh mượt mà
       gsap.to(card, { opacity: 0.15, duration: 0.4, onComplete: () => {
         card.style.backgroundImage = `url('${YAXUAN_IMAGES[imgIdx]}')`;
         gsap.to(card, { opacity: 1, duration: 0.5 });
@@ -894,16 +922,24 @@ function closeSecret(e) {
 }
 
 /* ══════════════════════════════════════════════════
-   CLOSE UNBOX MODAL
+   AUDIO AUTO-UNLOCK FOR MOBILE / SAFARI
 ══════════════════════════════════════════════════ */
-function closeUnbox(e) {
-  if (e && e.target !== document.getElementById('unboxOverlay') && !e.target.classList.contains('unbox-close')) return;
-  const overlay = document.getElementById('unboxOverlay');
-  gsap.to('#unboxCard', { scale: 0.9, opacity: 0, duration: 0.25, ease: 'power2.in', onComplete: () => {
-    overlay.classList.remove('visible');
-    gsap.set('#unboxCard', { scale: 1, opacity: 1 });
-  }});
+function unlockAudioOnGesture() {
+  const audio = document.getElementById('bgMusic');
+  if (audio) {
+    audio.play().then(() => {
+      audio.pause();
+      console.log("AudioContext unlocked successfully!");
+    }).catch(err => {
+      console.log("Audio unlock failed/blocked:", err);
+    });
+  }
+  window.removeEventListener('click', unlockAudioOnGesture);
+  window.removeEventListener('touchstart', unlockAudioOnGesture);
 }
+
+window.addEventListener('click', unlockAudioOnGesture, { once: true });
+window.addEventListener('touchstart', unlockAudioOnGesture, { once: true });
 
 /* ══════════════════════════════════════════════════
    INIT ON DOM READY
