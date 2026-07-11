@@ -593,11 +593,30 @@ function selectVibe(vibe) {
     ytTrackIdx = -1;
     const ytWrap = document.getElementById('ytPlayerWrap');
     if (ytWrap) ytWrap.style.display = 'none';
-    // Phát audio local (gesture vẫn còn hiệu lực vì đang trong click handler chọn vibe)
+    // Phát audio local – chờ 'canplay' để tránh race condition trên mobile
     if (audio) {
       audio.src = VIBE_MUSIC[vibe];
+      audio.volume = 1;
+      // Dùng sự kiện canplay để đảm bảo file đã buffer đủ trước khi play
+      const onCanPlay = () => {
+        audio.removeEventListener('canplay', onCanPlay);
+        if (!musicPlaying) {
+          audio.play().then(() => {
+            const disc    = document.getElementById('vinylDisc');
+            const tooltip = document.getElementById('vinylTooltip');
+            disc.classList.add('spinning');
+            if (noteInterval) clearInterval(noteInterval);
+            noteInterval  = setInterval(spawnNote, 900);
+            musicPlaying  = true;
+            if (tooltip) tooltip.classList.add('hidden');
+          }).catch(err => {
+            console.warn('Autoplay bị chặn (cần gesture):', err);
+            // Tooltip vẫn hiển thị để user biết cần nhấn vào đĩa
+          });
+        }
+      };
+      audio.addEventListener('canplay', onCanPlay);
       audio.load();
-      toggleMusic();
     }
   }
 
