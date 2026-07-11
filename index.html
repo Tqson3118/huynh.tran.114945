@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Hộp Quà Cánh Cụt 🐧 – Dành riêng cho Bảo Trân</title>
+  <meta name="description" content="Những lời chúc dễ thương dành riêng cho Cánh Cụt Bảo Trân – bzhenn." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Canvas nền particle -->
+  <canvas id="bgCanvas"></canvas>
+  <!-- Canvas magic trail (sparkles theo ngón tay / chuột) -->
+  <canvas id="trailCanvas"></canvas>
+
+  <!-- Đĩa than + nhạc nền -->
+  <div id="vinylPlayer" class="vinyl-player" title="Nhấn để phát / dừng nhạc">
+    <div class="vinyl-disc" id="vinylDisc">
+      <div class="vinyl-center" id="vinylCenter"></div>
+    </div>
+    <div class="vinyl-notes" id="vinylNotes"></div>
+    <audio id="bgMusic" loop>
+      <source src="https://ia801501.us.archive.org/13/items/78_the-moon-represents-my-heart_the-moon-represents-my-heart/01%20-%20The%20Moon%20Represents%20My%20Heart.mp3" type="audio/mpeg" />
+    </audio>
+  </div>
+
+  <!-- ═══════════════ WELCOME SCREEN ═══════════════ -->
+  <section id="screenWelcome" class="screen active">
+    <div class="welcome-glow"></div>
+    <div class="welcome-content">
+      <p class="welcome-sub">✨ Gửi tới</p>
+      <h1 class="welcome-title">
+        小企鹅<br>
+        <span class="highlight">Bảo Trân</span>
+      </h1>
+      <p class="welcome-pinyin">Xiǎo Qǐ'é · Zhēnzhēn</p>
+      <p class="welcome-desc">Chọn 1 trong những cái Cụt thích nhé 🐧</p>
+
+      <div class="vibe-buttons">
+        <button class="vibe-btn vibe-game" id="btnGame" onclick="selectVibe('game')">
+          <span class="vibe-icon">🎮</span>
+          <span class="vibe-label">Chơi Game</span>
+          <span class="vibe-sub">祝你上分顺利</span>
+        </button>
+        <button class="vibe-btn vibe-movie" id="btnMovie" onclick="selectVibe('movie')">
+          <span class="vibe-icon">🎬</span>
+          <span class="vibe-label">Xem Phim Khuya</span>
+          <span class="vibe-sub">愿你观影愉快</span>
+        </button>
+        <button class="vibe-btn vibe-sleep" id="btnSleep" onclick="selectVibe('sleep')">
+          <span class="vibe-icon">🌙</span>
+          <span class="vibe-label">Đi Ngủ Ngon</span>
+          <span class="vibe-sub">晚安，做个好梦</span>
+        </button>
+        <button class="vibe-btn vibe-yaxuan" id="btnYaxuan" onclick="selectVibe('yaxuan')">
+          <span class="vibe-icon">🌸</span>
+          <span class="vibe-label">宋亚轩 Mode</span>
+          <span class="vibe-sub">追星快乐每一天</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ GIFT GRID SCREEN ═══════════════ -->
+  <section id="screenGifts" class="screen">
+    <button id="btnBack" class="back-btn" onclick="goBack()">← Đổi Vibe</button>
+
+    <div class="gifts-header">
+      <p class="gifts-greeting" id="giftsGreeting"></p>
+      <h2 class="gifts-title">Chọn một hộp quà bí ẩn 🎁</h2>
+      <p class="gifts-sub">Còn <span id="remainCount">9</span> hộp chưa mở</p>
+      <p class="gifts-hint" id="groupHint"></p>
+    </div>
+
+    <div class="gift-grid" id="giftGrid"></div>
+  </section>
+
+  <!-- ═══════════════ MODAL UNBOX ═══════════════ -->
+  <div id="unboxOverlay" class="modal-overlay" onclick="closeUnbox(event)">
+    <div class="modal-card" id="unboxCard">
+      <div class="unbox-lid" id="unboxLid">🎁</div>
+      <div class="unbox-content" id="unboxContent">
+        <p class="unbox-zh" id="unboxZh"></p>
+        <p class="unbox-pinyin" id="unboxPinyin"></p>
+        <div class="unbox-divider"></div>
+        <p class="unbox-vi" id="unboxVi"></p>
+      </div>
+      <button class="modal-close-btn" onclick="closeUnbox()">✕ Đóng</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════ MODAL MẬT MÃ ═══════════════ -->
+  <div id="passwordOverlay" class="modal-overlay" onclick="closePasswordModal(event)">
+    <div class="modal-card password-card" id="passwordCard">
+      <div class="pwd-icon">🔑</div>
+      <h3 class="pwd-title">Nhóm <span id="pwdGroupLabel">A</span> – Hộp <span id="pwdBoxRange">1, 2, 3</span></h3>
+      <p class="pwd-desc">Nhập mật mã để mở khóa cả 3 hộp quà trong nhóm này nhé Cánh Cụt! 🐧</p>
+
+      <div class="pwd-input-wrap">
+        <input type="text" id="pwdInput"
+          placeholder="Nhập mật mã..."
+          autocomplete="off"
+          inputmode="text"
+          onkeydown="if(event.key==='Enter') verifyPassword()" />
+        <p id="pwdError" class="pwd-error"></p>
+      </div>
+
+      <div class="pwd-actions">
+        <button class="pwd-submit" onclick="verifyPassword()">Giải Mã ✨</button>
+        <button class="pwd-cancel" onclick="closePasswordModal()">Hủy</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
