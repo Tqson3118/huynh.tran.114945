@@ -9,12 +9,12 @@ const WISHES = {
       vi: "Chúc Cánh Cụt Trân Trân tối nay cảm giác tay cực đỉnh, ván nào cũng gánh team, leo rank mượt như nước chảy!"
     },
     {
-      zh: "愿我们的珍珍在游戏里所向癖靡，大吉大利，今晚吃鸡！",
+      zh: "愿我们的珍珍在游戏里所向披靡，大吉大利，今晚吃鸡！",
       pinyin: "Yuàn wǒmen de Zhēnzhēn zài yóuxì lǐ suǒ xiàng pī mǐ, dàjí dàlì, jīn wǎn chī jī!",
       vi: "Chúc Bảo Trân của chúng ta bách chiến bách thắng, đại cát đại lợi, tối nay ăn gà!"
     },
     {
-      zh: "祝bzhenn游戏愉快，队友神助攻，对手全白给，轻松赢下每一局！",
+      zh: "祝bzhenn game vui vẻ, đồng đội hỗ trợ thần sầu, đối thủ tự dâng hiến, thắng dễ dàng mọi ván!",
       pinyin: "Zhù bzhenn yóuxì yúkuài, duìyǒu shén zhùgōng, duìshǒu quán báigěi, qīngsōng yíng xià měi yī jú!",
       vi: "Chúc bzhenn chơi game vui vẻ, đồng đội hỗ trợ thần sầu, đối thủ tự dâng hiến, thắng dễ dàng mọi ván!"
     },
@@ -24,7 +24,7 @@ const WISHES = {
       vi: "Chúc Cánh Cụt nhỏ nhân phẩm tràn đầy, mở rương toàn đồ cực phẩm, trang bị xịn xò, niềm vui vô tận!"
     },
     {
-      zh: "祝珍珍游戏畅玩无阻，网速飞起，延迟为零，操作秀翻全场！",
+      zh: "祝珍珍游戏畅玩无阻，网速 fly lên, latency wéi líng, cāozuò xiù fān quánchǎng!",
       pinyin: "Zhù Zhēnzhēn yóuxì chàngwán wúzǔ, wǎng sù fēi qǐ, yánchí wéi líng, cāozuò xiù fān quánchǎng!",
       vi: "Chúc Trân Trân chơi game mượt mà không lag, mạng nhanh như bay, ping bằng 0, thao tác đỉnh cao gánh cả team!"
     },
@@ -39,7 +39,7 @@ const WISHES = {
       vi: "Chúc Trân Trân thần cản sát thần, Phật cản sát Phật, rank tăng vùn vụt, leo thẳng lên đỉnh vinh quang!"
     },
     {
-      zh: "愿bzhenn的本命英雄永远强势，Carry全场，胜率百分百！",
+      zh: "愿bzhenn de běnmìng yīngxióng yǒngyuǎn qiángshì, carry quánchǎng, shènglǜ bǎifēnbǎi!",
       pinyin: "Yuàn bzhenn de běnmìng yīngxióng yǒngyuǎn qiángshì, carry quánchǎng, shènglǜ bǎifēnbǎi!",
       vi: "Chúc tướng tủ của bzhenn luôn mạnh mẽ thống trị, gánh team cực đỉnh, tỷ lệ thắng đạt 100%!"
     },
@@ -78,7 +78,7 @@ const WISHES = {
     },
     {
       zh: "熬夜看电影也要记得盖好被子，小企鹅珍珍，今晚你是最佳女主角！",
-      pinyin: "Áoyè kàn diànyǐng yě yào jìde gài hǎo bèizi, Xiǎo Qǐ'é Zhēnzhēn, jīn wǎn nǐ ...",
+      pinyin: "Áoyè kàn diànyǐng yě yào jìde gài hǎo bèizi, Xiǎo Qǐ'é Zhēnzhēn, jīn wǎn nǐ shì zuìjiā nǚ zhǔjiǎo!",
       vi: "Thức khuya xem phim cũng nhớ đắp chăn ấm nhé, Cánh Cụt Trân Trân, tối nay em chính là nữ chính xuất sắc nhất!"
     },
     {
@@ -87,7 +87,7 @@ const WISHES = {
       vi: "Chúc Trân Trân tìm được bộ phim tâm đắc, tình tiết twist đến bất ngờ, niềm vui nhân đôi nhân ba!"
     },
     {
-      zh: "愿电影里所有的温柔与美好，都能在梦里 với 珍珍相遇。",
+      zh: "愿电影里所有的温柔与美好，都能在梦里与珍珍相遇。",
       pinyin: "Yuàn diànyǐng lǐ suǒyǒu de wēnróu yǔ měihǎo, dōu néng zài mèng lǐ yǔ Zhēnzhēn xiāngyù.",
       vi: "Nguyện tất cả sự dịu dàng và tốt đẹp trong phim sẽ cùng Trân Trân gặp nhau trong những giấc mơ đêm nay."
     },
@@ -101,11 +101,11 @@ const WISHES = {
   sleep: [
     {
       zh: "月亮眨眨眼，星光暖心田，愿小企鹅珍珍卸下一身疲惫，晚安，做个甜甜的美梦。",
-      pinyin: "Yuèliang zhǎ zhǎ yǎn, xīngguāng nuǎn xīn tián, yuàn Xiǎo Qǐ'é Zhēnzhēn xiè xià yīshēn píbèi, wǎn'ān, zuò gè tiántián de mèimèng.",
+      pinyin: "Yuèliang zhǎ zhǎ yǎn, xīngguāng nuǎn xīn tián, yuàn Xiǎo Qǐ'é Zhēnzhēn xiè xià yīshēn píbèi, wǎn'ān, zuò gè tiántián de měimèng.",
       vi: "Trăng khẽ chớp mắt, ánh sao sưởi ấm tim, nguyện Cánh Cụt Trân Trân trút bỏ mọi mệt mỏi, ngủ ngon và mơ giấc mộng ngọt ngào nhất."
     },
     {
-      zh: "愿夜空中的每一颗微星，都化作温和的祝愿，伴我的珍珍安然入睡。",
+      zh: "愿夜空中の每一颗微星，都化作温和的祝愿，伴我的珍珍安然入睡。",
       pinyin: "Yuàn yèkōng zhōng de měi yī kē wēi xīng, dōu huàzuò wēnhé de zhùyuàn, bàn wǒ de Zhēnzhēn ānrán rù shuì.",
       vi: "Nguyện mỗi ngôi sao nhỏ trên bầu trời đêm hóa thành lời chúc dịu dàng, đưa Bảo Trân của tôi vào giấc ngủ thật yên bình."
     },
@@ -121,7 +121,7 @@ const WISHES = {
     },
     {
       zh: "把今天的烦恼都交给夜空，明天又是元气满满的珍珍，晚安，好梦。",
-      pinyin: "Bǎ jīntiān de fánnǎo dōu jiāo gěi yèkōng, míngtiān yòu shì yuánqì mǎnmǎn de Zhēnzhēn, wǎn'ān, hǎo mèng.",
+      pinyin: "Bǎ jīntiān de fánnǎo dōu jiāo gěi yèkōng, míngtiān yòu ...",
       vi: "Hãy gửi hết muộn phiền hôm nay cho bầu trời đêm, ngày mai lại là một Trân Trân tràn đầy năng lượng, ngủ ngon và mơ đẹp."
     },
     {
@@ -135,13 +135,13 @@ const WISHES = {
       vi: "Sao sáng lấp lánh, màn đêm buông xuống, nguyện đêm tối tĩnh lặng nhất mang đến cho Trân Trân giấc ngủ sâu và ngon nhất."
     },
     {
-      zh: "愿bzhenn的梦里有星辰大海，有你喜欢的所有温柔与美妙旋律，晚安。",
+      zh: "愿bzhenn de mèng lǐ yǒu xīngchén dàhǎi, yǒu nǐ xǐhuān de suǒyǒu wēnróu yǔ měimiào xuánlǜ, wǎn'ān.",
       pinyin: "Yuàn bzhenn de mèng lǐ yǒu xīngchén dàhǎi, yǒu nǐ xǐhuān de suǒyǒu wēnróu yǔ měimiào xuánlǜ, wǎn'ān.",
       vi: "Nguyện trong giấc mơ của bzhenn có biển cả bầu trời sao, có tất cả sự dịu dàng và những giai điệu tuyệt vời nhất."
     },
     {
       zh: "闭上眼睛，静静听风的声音，那是世界在对小企鹅说：晚安，明天见。",
-      pinyin: "Bì shàng yǎnjīng, jìngjìng tīng fēng de shēngyīn, nà ...",
+      pinyin: "Bì shàng yǎnjīng, jìngjìng tīng fēng de shēngyīn, nà shì shìjiè zài duì Xiǎo Qǐ'é shuō: wǎn'ān, míngtiān jiàn.",
       vi: "Nhắm mắt lại, lặng nghe tiếng gió rì rào, đó là thế giới đang thầm thì với Cánh Cụt: Ngủ ngon, ngày mai gặp lại."
     }
   ],
@@ -154,17 +154,17 @@ const WISHES = {
     },
     {
       zh: "祝珍珍永远是宋亚轩最可爱的小粉丝，追星路上快乐无边！",
-      pinyin: "Zhù Zhēnzhēn yǒngyuǎn shì Sòng Yàxuān zuì kě'ài de xiǎo fěnsī, zhuī xīng lù shang kuàilè wúbiān!",
-      vi: "Chúc Trân Trân mãi mãi là fan dễ thương nhất của Tống Á Hiên, con đường theo đuổi idol tràn đầy hạnh phục!"
+      pinyin: "Zhù Zhēnzhēn yǒngyuǎn... Sòng Yàxuān zuì kě'ài de xiǎo fěnsī...",
+      vi: "Chúc Trân Trân mãi mãi là fan dễ thương nhất của Tống Á Hiên, con đường theo đuổi idol tràn đầy hạnh phúc!"
     },
     {
       zh: "愿小企鹅每次看到亚轩的视频都元气满满，笑容灿烂如春光！",
-      pinyin: "Yuàn Xiǎo Qǐ'é měi cì kàn dào Yàxuān de shìpín dōu yuánqì mǎnmǎn, xiàoróng cànlàn rú chūnguāng!",
+      pinyin: "Yuàn Xiǎo Qǐ'é měi cì kàn dào Yàxuān de... dōu yuánqì mǎnmǎn...",
       vi: "Nguyện Cánh Cụt mỗi lần xem clip của Á Hiên đều tràn đầy năng lượng, nụ cười rạng rỡ như ánh xuân!"
     },
     {
-      zh: "祝bzhenn与亚轩的每一次相遇都 thành wéi 珍贵的记忆，快乐永远！",
-      pinyin: "Zhù bzhenn yǔ Yàxuān de měi yī cì xiāngyù dōu chéngwéi zhēnguì de jìyì, kuàilè yǒngyuǎn!",
+      zh: "祝bzhenn与亚轩的每一次相遇都成为珍贵的记忆，快乐永远！",
+      pinyin: "Zhù bzhenn... Yàxuān de měi yī cì xiāngyù dōu...",
       vi: "Chúc bzhenn mỗi lần gặp gỡ Á Hiên đều trở thành ký ức quý giá, niềm vui mãi mãi!"
     },
     {
@@ -178,9 +178,9 @@ const WISHES = {
       vi: "Chúc Trân Trân mỗi ngày đều nhận được tin tức vui về Á Hiên, hạnh phúc ngập tràn chứa không hết!"
     },
     {
-      zh: "愿小企鹅的追星之路越走越宽，收获满满，快乐比星星还多！",
+      zh: "愿小企鹅的追星之路越走越宽，收获满满，快乐比星星还 do!",
       pinyin: "Yuàn Xiǎo Qǐ'é de zhuī xīng zhī lù yuè zǒu yuè kuān, shōuhuò mǎnmǎn, kuàilè bǐ xīngxīng hái duō!",
-      vi: "Nguyện con đường theo đuổi idol của Cánh Cụt ngày ngày rộng mở, gặt hái đầy thành quả, niềm vui nhiều hơn cả những vì sao!"
+      vi: "Nguyện con đường theo đuổi idol của Cánh Cụt ngày càng rộng mở, gặt hái đầy thành quả, niềm vui nhiều hơn cả những vì sao!"
     },
     {
       zh: "祝珍珍和亚轩的缘分越来越深，做最幸福的小企鹅粉丝！",
@@ -221,6 +221,11 @@ const BOX_GROUP   = [0,0,0, 1,1,1, 2,2,2]; // boxIndex → groupIndex (A=0,B=1,C
 const GROUP_NAMES = ['A','B','C'];
 
 /* ══════════════════════════════════════════════════
+   SONG YAXUAN IMAGE ASSETS
+══════════════════════════════════════════════════ */
+const YAXUAN_IMAGES = ['yaxuan.png', 'yaxuan1.png', 'yaxuan2.png', 'yaxuan3.png'];
+
+/* ══════════════════════════════════════════════════
    STATE
 ══════════════════════════════════════════════════ */
 let currentVibe    = null;
@@ -235,6 +240,7 @@ let trailDots      = [];
 let animFrame      = null;
 let trailFrame     = null;
 let pendingGroupClick = null;     // nhóm đang chờ xác thực password
+let secretSlideInterval = null;   // slide show của card hologram
 
 /* ══════════════════════════════════════════════════
    LOCAL STORAGE – lưu trạng thái đã mở theo vibe
@@ -489,11 +495,10 @@ function selectVibe(vibe) {
 
   document.getElementById('giftsGreeting').textContent = VIBE_META[vibe].greeting;
   
-  // Render
   renderGrid();
   setVinylTheme(vibe);
 
-  // Tự động bật nhạc sau khi chọn Vibe (User Gesture)
+  // Tự động bật nhạc khi vừa chọn vibe
   if (!musicPlaying) {
     toggleMusic();
   }
@@ -529,10 +534,8 @@ function resetVibe() {
   unlockedGroups.clear();
   saveState(currentVibe);
 
-  // Hiệu ứng nổ confetti nhẹ
   spawnConfetti(window.innerWidth / 2, window.innerHeight / 2, 25);
 
-  // Render lại
   renderGrid();
 }
 
@@ -559,19 +562,16 @@ function checkCompletion() {
   if (openedBoxes.size === 9) {
     triggerWrap.style.display = 'block';
     
-    // Điều chỉnh label nút cho Vibe Song Yaxuan
     if (currentVibe === 'yaxuan') {
       triggerBtn.innerHTML = '💌 Nhận Card Hologram & Thư Bí Mật của Á Hiên 🌸';
     } else {
       triggerBtn.innerHTML = '💌 Mở Thư Tay Bí Mật Của Cánh Cụt 🐧';
     }
 
-    // Cuộn nhẹ xuống để thấy nút nhận thư
     setTimeout(() => {
       triggerWrap.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }, 600);
 
-    // Nổ confetti tưng bừng chúc mừng
     spawnConfetti(window.innerWidth / 2, window.innerHeight * 0.4, 80);
   } else {
     triggerWrap.style.display = 'none';
@@ -715,10 +715,11 @@ function openBox(idx) {
   document.getElementById('unboxVi').textContent     = wish.vi;
   document.getElementById('unboxContent').style.opacity = '0';
 
-  // Hiển thị avatar nhỏ của Song Yaxuan nếu là vibe Yaxuan
+  // Hiển thị avatar nhỏ của Song Yaxuan (tuần tự theo 4 hình ảnh)
   const avatar = document.getElementById('unboxYaxuanImg');
   if (currentVibe === 'yaxuan') {
     avatar.style.display = 'block';
+    avatar.style.backgroundImage = `url('${YAXUAN_IMAGES[idx % YAXUAN_IMAGES.length]}')`;
   } else {
     avatar.style.display = 'none';
   }
@@ -747,7 +748,6 @@ function openBox(idx) {
     });
     setTimeout(() => spawnConfetti(window.innerWidth / 2, window.innerHeight * 0.3, 35), 300);
     
-    // Check nếu là hộp cuối cùng
     checkCompletion();
   }, 650);
 }
@@ -833,8 +833,25 @@ function showSecretLetter() {
     // Holographic card của Song Yaxuan
     const card = document.createElement('div');
     card.className = 'yaxuan-holo-card';
+    card.id = 'yaxuanHoloCard';
     card.title = 'Card bo góc Hologram lấp lánh của Á Hiên 🌸';
+    
+    // Đặt ảnh đầu tiên
+    let imgIdx = 0;
+    card.style.backgroundImage = `url('${YAXUAN_IMAGES[imgIdx]}')`;
     mediaWrap.appendChild(card);
+
+    // Bắt đầu slideshow tự chuyển ảnh mỗi 3.5 giây
+    if (secretSlideInterval) clearInterval(secretSlideInterval);
+    secretSlideInterval = setInterval(() => {
+      imgIdx = (imgIdx + 1) % YAXUAN_IMAGES.length;
+      
+      // Hiệu ứng fade chuyển đổi ảnh mượt mà
+      gsap.to(card, { opacity: 0.15, duration: 0.4, onComplete: () => {
+        card.style.backgroundImage = `url('${YAXUAN_IMAGES[imgIdx]}')`;
+        gsap.to(card, { opacity: 1, duration: 0.5 });
+      }});
+    }, 3500);
 
     body.innerHTML = `Gửi Bảo Trân (bzhenn) dễ thương nhất hệ mặt trời, 🌸
 
@@ -856,7 +873,6 @@ Hy vọng những bộ phim đêm muộn luôn mang lại cho em những giây p
 
 Cày phim vui nhưng đừng thức khuya đến tận 4-5 giờ sáng nhé, nhớ giữ gìn sức khỏe thật tốt nha! 🍿🎥`;
   } else {
-    // sleep
     body.innerHTML = `Chúc ngủ ngon, Cánh Cụt Bảo Trân thân yêu! 🌙
 
 Chúc em luôn có những giấc ngủ thật sâu, êm đềm và có những giấc mơ ngọt ngào, bay bổng. 
@@ -871,6 +887,10 @@ Mọi lo toan và mệt mỏi của ngày hôm nay cứ gửi lại cho bầu tr
 function closeSecret(e) {
   if (e && e.target !== document.getElementById('secretOverlay')) return;
   document.getElementById('secretOverlay').classList.remove('visible');
+  if (secretSlideInterval) {
+    clearInterval(secretSlideInterval);
+    secretSlideInterval = null;
+  }
 }
 
 /* ══════════════════════════════════════════════════
