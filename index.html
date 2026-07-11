@@ -20,12 +20,13 @@
 
   <!-- Đĩa than + nhạc nền -->
   <div id="vinylPlayer" class="vinyl-player" title="Nhấn để phát / dừng nhạc">
+    <div class="vinyl-tooltip" id="vinylTooltip">Nhấp đĩa để bật nhạc 🎵</div>
     <div class="vinyl-disc" id="vinylDisc">
       <div class="vinyl-center" id="vinylCenter"></div>
     </div>
     <div class="vinyl-notes" id="vinylNotes"></div>
     <audio id="bgMusic" loop>
-      <source src="https://ia801501.us.archive.org/13/items/78_the-moon-represents-my-heart_the-moon-represents-my-heart/01%20-%20The%20Moon%20Represents%20My%20Heart.mp3" type="audio/mpeg" />
+      <source src="https://assets.codepen.io/4358584/An+itek+-+Our+Love.mp3" type="audio/mpeg" />
     </audio>
   </div>
 
@@ -69,6 +70,7 @@
   <!-- ═══════════════ GIFT GRID SCREEN ═══════════════ -->
   <section id="screenGifts" class="screen">
     <button id="btnBack" class="back-btn" onclick="goBack()">← Đổi Vibe</button>
+    <button id="btnReset" class="reset-btn" onclick="resetVibe()">Chơi lại 🔄</button>
 
     <div class="gifts-header">
       <p class="gifts-greeting" id="giftsGreeting"></p>
@@ -78,6 +80,12 @@
     </div>
 
     <div class="gift-grid" id="giftGrid"></div>
+
+    <div class="secret-trigger-wrap" id="secretTriggerWrap" style="display: none; text-align: center; margin-top: -60px; margin-bottom: 100px;">
+      <button id="btnOpenSecret" class="secret-trigger-btn" onclick="showSecretLetter()">
+        💌 Nhận Card & Thư Bí Mật của Á Hiên 🌸
+      </button>
+    </div>
   </section>
 
   <!-- ═══════════════ MODAL UNBOX ═══════════════ -->
@@ -85,6 +93,8 @@
     <div class="modal-card" id="unboxCard">
       <div class="unbox-lid" id="unboxLid">🎁</div>
       <div class="unbox-content" id="unboxContent">
+        <!-- Khu vực hiển thị mini image của Song Yaxuan nếu ở Vibe Yaxuan -->
+        <div id="unboxYaxuanImg" class="unbox-yaxuan-img"></div>
         <p class="unbox-zh" id="unboxZh"></p>
         <p class="unbox-pinyin" id="unboxPinyin"></p>
         <div class="unbox-divider"></div>
@@ -114,6 +124,19 @@
         <button class="pwd-submit" onclick="verifyPassword()">Giải Mã ✨</button>
         <button class="pwd-cancel" onclick="closePasswordModal()">Hủy</button>
       </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ MODAL THƯ BÍ MẬT ═══════════════ -->
+  <div id="secretOverlay" class="modal-overlay" onclick="closeSecret(event)">
+    <div class="modal-card secret-card" id="secretCard">
+      <div class="secret-header">🎁 QUÀ TẶNG ĐẶC BIỆT DÀNH CHO CÁNH CỤT 🐧</div>
+      
+      <!-- Card Hologram cho Song Yaxuan hoặc hình ảnh tương tác khác -->
+      <div id="secretMediaWrap" class="secret-media-wrap"></div>
+      
+      <div class="secret-body" id="secretBody"></div>
+      <button class="modal-close-btn" onclick="closeSecret()">✕ Đóng Thư</button>
     </div>
   </div>
 

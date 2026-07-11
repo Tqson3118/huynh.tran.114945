@@ -9,7 +9,7 @@ const WISHES = {
       vi: "Chúc Cánh Cụt Trân Trân tối nay cảm giác tay cực đỉnh, ván nào cũng gánh team, leo rank mượt như nước chảy!"
     },
     {
-      zh: "愿我们的珍珍在游戏里所向披靡，大吉大利，今晚吃鸡！",
+      zh: "愿我们的珍珍在游戏里所向癖靡，大吉大利，今晚吃鸡！",
       pinyin: "Yuàn wǒmen de Zhēnzhēn zài yóuxì lǐ suǒ xiàng pī mǐ, dàjí dàlì, jīn wǎn chī jī!",
       vi: "Chúc Bảo Trân của chúng ta bách chiến bách thắng, đại cát đại lợi, tối nay ăn gà!"
     },
@@ -78,7 +78,7 @@ const WISHES = {
     },
     {
       zh: "熬夜看电影也要记得盖好被子，小企鹅珍珍，今晚你是最佳女主角！",
-      pinyin: "Áoyè kàn diànyǐng yě yào jìde gài hǎo bèizi, Xiǎo Qǐ'é Zhēnzhēn, jīn wǎn nǐ shì zuìjiā nǚ zhǔjiǎo!",
+      pinyin: "Áoyè kàn diànyǐng yě yào jìde gài hǎo bèizi, Xiǎo Qǐ'é Zhēnzhēn, jīn wǎn nǐ ...",
       vi: "Thức khuya xem phim cũng nhớ đắp chăn ấm nhé, Cánh Cụt Trân Trân, tối nay em chính là nữ chính xuất sắc nhất!"
     },
     {
@@ -87,7 +87,7 @@ const WISHES = {
       vi: "Chúc Trân Trân tìm được bộ phim tâm đắc, tình tiết twist đến bất ngờ, niềm vui nhân đôi nhân ba!"
     },
     {
-      zh: "愿电影里所有的温柔与美好，都能在梦里与珍珍相遇。",
+      zh: "愿电影里所有的温柔与美好，都能在梦里 với 珍珍相遇。",
       pinyin: "Yuàn diànyǐng lǐ suǒyǒu de wēnróu yǔ měihǎo, dōu néng zài mèng lǐ yǔ Zhēnzhēn xiāngyù.",
       vi: "Nguyện tất cả sự dịu dàng và tốt đẹp trong phim sẽ cùng Trân Trân gặp nhau trong những giấc mơ đêm nay."
     },
@@ -101,7 +101,7 @@ const WISHES = {
   sleep: [
     {
       zh: "月亮眨眨眼，星光暖心田，愿小企鹅珍珍卸下一身疲惫，晚安，做个甜甜的美梦。",
-      pinyin: "Yuèliang zhǎ zhǎ yǎn, xīngguāng nuǎn xīn tián, yuàn Xiǎo Qǐ'é Zhēnzhēn xiè xià yīshēn píbèi, wǎn'ān, zuò gè tiántián de měimèng.",
+      pinyin: "Yuèliang zhǎ zhǎ yǎn, xīngguāng nuǎn xīn tián, yuàn Xiǎo Qǐ'é Zhēnzhēn xiè xià yīshēn píbèi, wǎn'ān, zuò gè tiántián de mèimèng.",
       vi: "Trăng khẽ chớp mắt, ánh sao sưởi ấm tim, nguyện Cánh Cụt Trân Trân trút bỏ mọi mệt mỏi, ngủ ngon và mơ giấc mộng ngọt ngào nhất."
     },
     {
@@ -141,7 +141,7 @@ const WISHES = {
     },
     {
       zh: "闭上眼睛，静静听风的声音，那是世界在对小企鹅说：晚安，明天见。",
-      pinyin: "Bì shàng yǎnjīng, jìngjìng tīng fēng de shēngyīn, nà shì shìjiè zài duì Xiǎo Qǐ'é shuō: wǎn'ān, míngtiān jiàn.",
+      pinyin: "Bì shàng yǎnjīng, jìngjìng tīng fēng de shēngyīn, nà ...",
       vi: "Nhắm mắt lại, lặng nghe tiếng gió rì rào, đó là thế giới đang thầm thì với Cánh Cụt: Ngủ ngon, ngày mai gặp lại."
     }
   ],
@@ -155,7 +155,7 @@ const WISHES = {
     {
       zh: "祝珍珍永远是宋亚轩最可爱的小粉丝，追星路上快乐无边！",
       pinyin: "Zhù Zhēnzhēn yǒngyuǎn shì Sòng Yàxuān zuì kě'ài de xiǎo fěnsī, zhuī xīng lù shang kuàilè wúbiān!",
-      vi: "Chúc Trân Trân mãi mãi là fan dễ thương nhất của Tống Á Hiên, con đường theo đuổi idol tràn đầy hạnh phúc!"
+      vi: "Chúc Trân Trân mãi mãi là fan dễ thương nhất của Tống Á Hiên, con đường theo đuổi idol tràn đầy hạnh phục!"
     },
     {
       zh: "愿小企鹅每次看到亚轩的视频都元气满满，笑容灿烂如春光！",
@@ -163,7 +163,7 @@ const WISHES = {
       vi: "Nguyện Cánh Cụt mỗi lần xem clip của Á Hiên đều tràn đầy năng lượng, nụ cười rạng rỡ như ánh xuân!"
     },
     {
-      zh: "祝bzhenn与亚轩的每一次相遇都成为珍贵的记忆，快乐永远！",
+      zh: "祝bzhenn与亚轩的每一次相遇都 thành wéi 珍贵的记忆，快乐永远！",
       pinyin: "Zhù bzhenn yǔ Yàxuān de měi yī cì xiāngyù dōu chéngwéi zhēnguì de jìyì, kuàilè yǒngyuǎn!",
       vi: "Chúc bzhenn mỗi lần gặp gỡ Á Hiên đều trở thành ký ức quý giá, niềm vui mãi mãi!"
     },
@@ -180,7 +180,7 @@ const WISHES = {
     {
       zh: "愿小企鹅的追星之路越走越宽，收获满满，快乐比星星还多！",
       pinyin: "Yuàn Xiǎo Qǐ'é de zhuī xīng zhī lù yuè zǒu yuè kuān, shōuhuò mǎnmǎn, kuàilè bǐ xīngxīng hái duō!",
-      vi: "Nguyện con đường theo đuổi idol của Cánh Cụt ngày càng rộng mở, gặt hái đầy thành quả, niềm vui nhiều hơn cả những vì sao!"
+      vi: "Nguyện con đường theo đuổi idol của Cánh Cụt ngày ngày rộng mở, gặt hái đầy thành quả, niềm vui nhiều hơn cả những vì sao!"
     },
     {
       zh: "祝珍珍和亚轩的缘分越来越深，做最幸福的小企鹅粉丝！",
@@ -224,7 +224,7 @@ const GROUP_NAMES = ['A','B','C'];
    STATE
 ══════════════════════════════════════════════════ */
 let currentVibe    = null;
-let openedBoxes    = new Set();   // chỉ số hộp đã mở (hiện tại phiên)
+let openedBoxes    = new Set();   // chỉ số hộp đã mở
 let unlockedGroups = new Set();   // nhóm đã nhập mật mã đúng
 let musicPlaying   = false;
 let noteInterval   = null;
@@ -341,7 +341,6 @@ function drawParticles() {
       particleCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
       particleCtx.fill();
     } else if (type === 'petal') {
-      // Cánh hoa nhỏ
       p.rot += p.rotSpeed;
       particleCtx.save();
       particleCtx.translate(p.x, p.y);
@@ -442,6 +441,7 @@ function setVinylTheme(vibe) {
 function toggleMusic() {
   const audio = document.getElementById('bgMusic');
   const disc  = document.getElementById('vinylDisc');
+  const tooltip = document.getElementById('vinylTooltip');
   if (musicPlaying) {
     audio.pause();
     disc.classList.remove('spinning');
@@ -452,6 +452,7 @@ function toggleMusic() {
     disc.classList.add('spinning');
     noteInterval = setInterval(spawnNote, 900);
     musicPlaying = true;
+    if (tooltip) tooltip.classList.add('hidden');
   }
 }
 
@@ -476,7 +477,6 @@ function selectVibe(vibe) {
   currentVibe = vibe;
   document.body.setAttribute('data-theme', vibe);
 
-  // Load localStorage state
   loadState(vibe);
 
   const welcome = document.getElementById('screenWelcome');
@@ -488,9 +488,15 @@ function selectVibe(vibe) {
   }});
 
   document.getElementById('giftsGreeting').textContent = VIBE_META[vibe].greeting;
-  updateRemainCount();
+  
+  // Render
   renderGrid();
   setVinylTheme(vibe);
+
+  // Tự động bật nhạc sau khi chọn Vibe (User Gesture)
+  if (!musicPlaying) {
+    toggleMusic();
+  }
 
   if (animFrame) cancelAnimationFrame(animFrame);
   spawnParticles(VIBE_META[vibe].particle);
@@ -512,7 +518,26 @@ function goBack() {
 }
 
 /* ══════════════════════════════════════════════════
-   GROUP HINT
+   RESET FUNCTION
+══════════════════════════════════════════════════ */
+function resetVibe() {
+  if (!currentVibe) return;
+  const agree = confirm("Cánh Cụt muốn chơi lại Vibe này từ đầu à? Các hộp quà sẽ được khóa lại để mở khóa nhé! 🐧🔄");
+  if (!agree) return;
+
+  openedBoxes.clear();
+  unlockedGroups.clear();
+  saveState(currentVibe);
+
+  // Hiệu ứng nổ confetti nhẹ
+  spawnConfetti(window.innerWidth / 2, window.innerHeight / 2, 25);
+
+  // Render lại
+  renderGrid();
+}
+
+/* ══════════════════════════════════════════════════
+   GROUP HINT & COMPLETION CHECK
 ══════════════════════════════════════════════════ */
 function updateGroupHint() {
   const hint = document.getElementById('groupHint');
@@ -522,7 +547,34 @@ function updateGroupHint() {
   } else if (unlockedCount < 3) {
     hint.textContent = `✅ Đã mở khóa ${unlockedCount}/3 nhóm`;
   } else {
-    hint.textContent = '🎉 Tất cả nhóm đã mở khóa! Chúc mừng Cánh Cụt! 🐧';
+    hint.textContent = '🎉 Tất cả nhóm đã mở khóa! Hãy mở hết các hộp quà nhé! 🐧';
+  }
+}
+
+function checkCompletion() {
+  const triggerWrap = document.getElementById('secretTriggerWrap');
+  const triggerBtn = document.getElementById('btnOpenSecret');
+  if (!triggerWrap || !triggerBtn) return;
+
+  if (openedBoxes.size === 9) {
+    triggerWrap.style.display = 'block';
+    
+    // Điều chỉnh label nút cho Vibe Song Yaxuan
+    if (currentVibe === 'yaxuan') {
+      triggerBtn.innerHTML = '💌 Nhận Card Hologram & Thư Bí Mật của Á Hiên 🌸';
+    } else {
+      triggerBtn.innerHTML = '💌 Mở Thư Tay Bí Mật Của Cánh Cụt 🐧';
+    }
+
+    // Cuộn nhẹ xuống để thấy nút nhận thư
+    setTimeout(() => {
+      triggerWrap.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }, 600);
+
+    // Nổ confetti tưng bừng chúc mừng
+    spawnConfetti(window.innerWidth / 2, window.innerHeight * 0.4, 80);
+  } else {
+    triggerWrap.style.display = 'none';
   }
 }
 
@@ -566,6 +618,7 @@ function renderGrid() {
 
   updateRemainCount();
   updateGroupHint();
+  checkCompletion();
 }
 
 function updateRemainCount() {
@@ -595,11 +648,10 @@ function verifyPassword() {
   const correct = GROUP_PASSWORDS[groupName].toLowerCase();
 
   if (entered === correct) {
-    // ✅ Đúng mật mã
     unlockedGroups.add(groupName);
     saveState(currentVibe);
     closePasswordModal();
-    // Unlock animation for all boxes in group
+    
     const boxes = GROUP_BOXES[groupName];
     boxes.forEach((bIdx, i) => {
       setTimeout(() => {
@@ -607,7 +659,6 @@ function verifyPassword() {
         if (!el || openedBoxes.has(bIdx)) return;
         el.classList.remove('locked');
         el.classList.add('unlocked-ready');
-        // Replace click handler
         const newEl = el.cloneNode(true);
         el.parentNode.replaceChild(newEl, el);
         newEl.addEventListener('click', () => openBox(bIdx));
@@ -615,16 +666,14 @@ function verifyPassword() {
       }, i * 180);
     });
     updateGroupHint();
-    // Mini confetti burst
     spawnConfetti(window.innerWidth / 2, window.innerHeight / 2, 30);
   } else {
-    // ❌ Sai mật mã – rung lắc
     const card = document.getElementById('passwordCard');
     const errEl = document.getElementById('pwdError');
     errEl.textContent = '❌ Mật mã sai rồi Cánh Cụt ơi, thử lại nhé!';
     errEl.classList.add('show');
     card.classList.remove('shake');
-    void card.offsetWidth; // reflow
+    void card.offsetWidth;
     card.classList.add('shake');
     document.getElementById('pwdInput').value = '';
     setTimeout(() => {
@@ -649,7 +698,6 @@ function openBox(idx) {
   saveState(currentVibe);
   updateRemainCount();
 
-  // Mark box as opened in DOM
   const boxEl = document.getElementById('box-' + idx);
   gsap.to(boxEl, { scale: 1.15, duration: 0.15, ease: 'power1.out', onComplete: () => {
     gsap.to(boxEl, { scale: 0.92, opacity: 0.45, duration: 0.3, ease: 'power2.in' });
@@ -658,17 +706,23 @@ function openBox(idx) {
   boxEl.classList.add('opened');
   boxEl.classList.remove('unlocked-ready', 'locked');
 
-  // Burst particles from box center
   burstParticles(boxEl);
 
-  // Prepare modal content
+  // Set modal content
   const wish = WISHES[currentVibe][idx];
   document.getElementById('unboxZh').textContent     = wish.zh;
   document.getElementById('unboxPinyin').textContent = wish.pinyin;
   document.getElementById('unboxVi').textContent     = wish.vi;
   document.getElementById('unboxContent').style.opacity = '0';
 
-  // Reset lid animation
+  // Hiển thị avatar nhỏ của Song Yaxuan nếu là vibe Yaxuan
+  const avatar = document.getElementById('unboxYaxuanImg');
+  if (currentVibe === 'yaxuan') {
+    avatar.style.display = 'block';
+  } else {
+    avatar.style.display = 'none';
+  }
+
   const lid = document.getElementById('unboxLid');
   lid.style.animation = 'none';
   void lid.offsetWidth;
@@ -676,7 +730,6 @@ function openBox(idx) {
 
   document.getElementById('unboxOverlay').classList.add('visible');
 
-  // After lid: stagger text
   setTimeout(() => {
     gsap.to('#unboxContent', { opacity: 1, y: [10, 0], duration: 0.6, ease: 'power3.out' });
     const zhEl = document.getElementById('unboxZh');
@@ -692,8 +745,10 @@ function openBox(idx) {
         { opacity: 1, y: 0, duration: 0.3, delay: i * 0.04, ease: 'power2.out' }
       );
     });
-    // Confetti!
-    setTimeout(() => spawnConfetti(window.innerWidth / 2, window.innerHeight * 0.3, 60), 300);
+    setTimeout(() => spawnConfetti(window.innerWidth / 2, window.innerHeight * 0.3, 35), 300);
+    
+    // Check nếu là hộp cuối cùng
+    checkCompletion();
   }, 650);
 }
 
@@ -760,6 +815,62 @@ function spawnConfetti(cx, cy, count) {
       onComplete: () => el.remove()
     });
   }
+}
+
+/* ══════════════════════════════════════════════════
+   SECRET LETTER OVERLAY
+══════════════════════════════════════════════════ */
+function showSecretLetter() {
+  const mediaWrap = document.getElementById('secretMediaWrap');
+  const body = document.getElementById('secretBody');
+  const overlay = document.getElementById('secretOverlay');
+  
+  if (!mediaWrap || !body || !overlay) return;
+
+  mediaWrap.innerHTML = '';
+  
+  if (currentVibe === 'yaxuan') {
+    // Holographic card của Song Yaxuan
+    const card = document.createElement('div');
+    card.className = 'yaxuan-holo-card';
+    card.title = 'Card bo góc Hologram lấp lánh của Á Hiên 🌸';
+    mediaWrap.appendChild(card);
+
+    body.innerHTML = `Gửi Bảo Trân (bzhenn) dễ thương nhất hệ mặt trời, 🌸
+
+Cảm ơn Cánh Cụt đã kiên trì giải mã và mở hết tất cả hộp quà nhé! Tống Á Hiên gửi tới em ngàn lời chúc ngọt ngào nhất. 
+
+Hy vọng mỗi ngày trôi qua em đều tràn ngập niềm vui, may mắn, học tập và làm việc thật tốt, và đặc biệt là luôn giữ nụ cười rạng rỡ như ánh nắng xuân trên môi nha! 🐧✨
+
+~ From bzhenn's Special Gift App ~`;
+  } else if (currentVibe === 'game') {
+    body.innerHTML = `Chúc mừng Cựu Chiến Binh Cánh Cụt! 🎮
+
+Bạn đã xuất sắc vượt qua tất cả các thử thách mật mã để unbox thành công toàn bộ 9 hộp quà. 
+
+Chúc Bảo Trân chơi game luôn vui vẻ, không bao giờ gặp đồng đội 'tạ', leo rank vùn vụt, sở hữu những trang bị xịn sò nhất và luôn là MVP tỏa sáng trong lòng mọi người nhé! 🏆✨`;
+  } else if (currentVibe === 'movie') {
+    body.innerHTML = `Chúc mừng mọt phim Cánh Cụt Trân Trân! 🎬
+
+Hy vọng những bộ phim đêm muộn luôn mang lại cho em những giây phút giải trí thoải mái, ấm áp và đong đầy cảm xúc ý nghĩa. 
+
+Cày phim vui nhưng đừng thức khuya đến tận 4-5 giờ sáng nhé, nhớ giữ gìn sức khỏe thật tốt nha! 🍿🎥`;
+  } else {
+    // sleep
+    body.innerHTML = `Chúc ngủ ngon, Cánh Cụt Bảo Trân thân yêu! 🌙
+
+Chúc em luôn có những giấc ngủ thật sâu, êm đềm và có những giấc mơ ngọt ngào, bay bổng. 
+
+Mọi lo toan và mệt mỏi của ngày hôm nay cứ gửi lại cho bầu trời đêm và những vì sao lấp lánh nhé. Ngày mai thức dậy sẽ là một ngày mới tràn ngập niềm vui dịu dàng đối với em! 🐧💤`;
+  }
+
+  overlay.classList.add('visible');
+  spawnConfetti(window.innerWidth / 2, window.innerHeight / 2, 60);
+}
+
+function closeSecret(e) {
+  if (e && e.target !== document.getElementById('secretOverlay')) return;
+  document.getElementById('secretOverlay').classList.remove('visible');
 }
 
 /* ══════════════════════════════════════════════════
