@@ -570,30 +570,33 @@ function selectVibe(vibe) {
   musicPlaying = false;
 
   if (vibe === 'yaxuan') {
-    // Dừng audio local, khởi động YouTube
+    // Dừng audio local, chuẩn bị YouTube (KHÔNG auto-play – mobile block)
     if (audio) audio.pause();
     const ytWrap = document.getElementById('ytPlayerWrap');
     if (ytWrap) ytWrap.style.display = 'block';
+    ytTrackIdx = -1; // reset vòng bài
     if (ytPlayer && ytReady) {
-      ytPlayer.loadVideoById(YAXUAN_YT_ID);
-      // Kích hoạt phát sau khi player đã load
-      setTimeout(() => toggleMusic(), 300);
-    } else {
-      // YouTube API chưa ready – sẽ auto-play khi onYouTubeIframeAPIReady
-      window._pendingYTPlay = true;
+      // Cứ video sẵn sàng nhưng KHÔNG phát – đợi user chạm đĩa than
+      try { ytPlayer.cueVideoById(YAXUAN_YT_TRACKS[0].id); } catch(e) {}
+    }
+    // Hiện tooltip gợi ý chạm đĩa
+    const tooltip = document.getElementById('vinylTooltip');
+    if (tooltip) {
+      tooltip.innerHTML = 'Chạm để nghe 是你 🌸<br><span style="font-size:0.6rem;opacity:0.8;">(iP: gạt sườn bật tiếng nhé 🐧)</span>';
+      tooltip.classList.remove('hidden');
     }
   } else {
     // Dừng YouTube nếu đang chạy
     if (ytPlayer && ytReady) {
       try { ytPlayer.stopVideo(); } catch(e) {}
     }
+    ytTrackIdx = -1;
     const ytWrap = document.getElementById('ytPlayerWrap');
     if (ytWrap) ytWrap.style.display = 'none';
-    // Phát audio local
+    // Phát audio local (gesture vẫn còn hiệu lực vì đang trong click handler chọn vibe)
     if (audio) {
       audio.src = VIBE_MUSIC[vibe];
       audio.load();
-      // Auto-play khi đã có gesture
       toggleMusic();
     }
   }
@@ -622,6 +625,7 @@ function goBack() {
   disc.classList.remove('spinning');
   if (noteInterval) clearInterval(noteInterval);
   musicPlaying = false;
+  ytTrackIdx = -1;
   if (audio) audio.pause();
   if (ytPlayer && ytReady) {
     try { ytPlayer.stopVideo(); } catch(e) {}
@@ -1006,28 +1010,27 @@ function closeSecret(e) {
 ══════════════════════════════════════════════════ */
 function onYouTubeIframeAPIReady() {
   ytPlayer = new YT.Player('ytPlayerIframe', {
-    videoId: YAXUAN_YT_ID,
+    videoId: YAXUAN_YT_TRACKS[0].id,
     playerVars: {
       autoplay: 0,
       controls: 0,
-      loop: 1,
-      playlist: YAXUAN_YT_PLAYLIST, // 是你 + chill song lặp lại
+      loop: 0,          // tự quản lý vòng lặp qua onStateChange
       modestbranding: 1,
-      rel: 0
+      rel: 0,
+      playsinline: 1    // quan trọng trên iOS: phát trong trang thay vì fullscreen
     },
     events: {
-      onReady: (event) => {
+      onReady: () => {
         ytReady = true;
         console.log('YouTube player ready ✅');
-        if (window._pendingYTPlay) {
-          window._pendingYTPlay = false;
-          event.target.playVideo();
-          const disc = document.getElementById('vinylDisc');
-          disc.classList.add('spinning');
-          noteInterval = setInterval(spawnNote, 900);
-          musicPlaying = true;
-          const tooltip = document.getElementById('vinylTooltip');
-          if (tooltip) tooltip.classList.add('hidden');
+        // Không auto-play – đợi user chạm đĩa than (an toàn trên mobile)
+      },
+      onStateChange: (event) => {
+        // Khi bài hiện tại kết thúc (ENDED) – chuyển sang bài tiếp trong playlist
+        if (event.data === YT.PlayerState.ENDED) {
+          const nextIdx = (ytTrackIdx + 1) % YAXUAN_YT_TRACKS.length;
+          ytPlayer.loadVideoById(YAXUAN_YT_TRACKS[nextIdx].id);
+          ytTrackIdx = nextIdx;
         }
       },
       onError: (e) => {
