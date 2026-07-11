@@ -232,9 +232,12 @@ const VIBE_MUSIC = {
   movie:  "tunetank-asian-chinese-background-music-349936.mp3",
   sleep:  "tunetank-asian-chinese-background-music-349936.mp3"
 };
-// YouTube video ID riêng cho vibe Yaxuan
+// YouTube tracks cho vibe Yaxuan (vòng 3 nhịp: play 是你 → chill → tắt)
 const YAXUAN_YT_ID = "HLUrpPiHm3U"; // "是你" - Song Yaxuan
-const YAXUAN_YT_PLAYLIST = "HLUrpPiHm3U,yU2LpJC8b24"; // playlist: 是你 + chill song
+const YAXUAN_YT_TRACKS = [
+  { id: "HLUrpPiHm3U", name: "是你 – Song Yaxuan 🌸" },
+  { id: "yU2LpJC8b24", name: "Chill Mode 🎧" }
+];
 
 /* ══════════════════════════════════════════════════
    STATE
@@ -254,6 +257,7 @@ let pendingGroupClick = null;
 let secretSlideInterval = null;
 let ytPlayer       = null;   // YouTube IFrame Player instance
 let ytReady        = false;  // YouTube API đã sẵn sàng chưa
+let ytTrackIdx     = -1;     // -1=tắt, 0=track0(是你), 1=track1(chill)
 
 /* ══════════════════════════════════════════════════
    LOCAL STORAGE
@@ -462,25 +466,45 @@ function toggleMusic() {
   const tooltip = document.getElementById('vinylTooltip');
 
   if (currentVibe === 'yaxuan') {
-    // ── Vibe Yaxuan: điều khiển YouTube Player ──
+    // ── Vibe Yaxuan: vòng 3 nhịp ──
+    // ytTrackIdx: -1(tắt) → 0(是你) → 1(chill) → -1(tắt) → ...
     if (!ytPlayer || !ytReady) {
       console.warn('YouTube player chưa sẵn sàng, thử lại sau...');
       return;
     }
-    if (musicPlaying) {
+
+    const nextIdx = ytTrackIdx + 1; // -1→0, 0→1, 1→2
+
+    if (nextIdx >= YAXUAN_YT_TRACKS.length) {
+      // ── Nhịp 3: TẮT ──
       ytPlayer.pauseVideo();
       disc.classList.remove('spinning');
       clearInterval(noteInterval);
       musicPlaying = false;
+      ytTrackIdx = -1;
+      if (tooltip) {
+        tooltip.innerHTML = 'Chạm để phát nhạc 🎵<br><span style="font-size:0.6rem;opacity:0.8;">Nhấn lại để đổi bài 🐧</span>';
+        tooltip.classList.remove('hidden');
+      }
     } else {
-      ytPlayer.playVideo();
+      // ── Nhịp 1 hoặc 2: PHÁT bài tiếp theo ──
+      const track = YAXUAN_YT_TRACKS[nextIdx];
+      ytPlayer.loadVideoById(track.id);
       disc.classList.add('spinning');
-      noteInterval = setInterval(spawnNote, 900);
-      musicPlaying = true;
-      if (tooltip) tooltip.classList.add('hidden');
+      if (!musicPlaying) {
+        noteInterval = setInterval(spawnNote, 900);
+        musicPlaying = true;
+      }
+      ytTrackIdx = nextIdx;
+      if (tooltip) {
+        tooltip.innerHTML = `♫ ${track.name}<br><span style="font-size:0.55rem;opacity:0.75;">Nhấn lại để đổi bài / tắt</span>`;
+        tooltip.classList.remove('hidden');
+        // Tự ẩn tooltip sau 3 giây
+        setTimeout(() => { if (tooltip) tooltip.classList.add('hidden'); }, 3000);
+      }
     }
   } else {
-    // ── Vibe khác: điều khiển <audio> local ──
+    // ── Vibe khác: toggle đơn giản ──
     const audio = document.getElementById('bgMusic');
     if (musicPlaying) {
       audio.pause();
@@ -832,6 +856,12 @@ function openBox(idx) {
     
     checkCompletion();
   }, 650);
+}
+
+function closeUnbox(e) {
+  // Nếu được gọi từ onclick overlay, chỉ đóng khi click đúng nền (không phải card bên trong)
+  if (e && e.target !== document.getElementById('unboxOverlay')) return;
+  document.getElementById('unboxOverlay').classList.remove('visible');
 }
 
 /* ══════════════════════════════════════════════════
